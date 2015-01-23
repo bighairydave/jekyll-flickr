@@ -50,7 +50,7 @@ module Jekyll
         @photo.merge!(@@cached[photo_key] || get_photo)
 
         selected_size = @photo[:sizes][@photo[:size]]
-        "<a class=\"thumbnail\" href=\"#{@photo[:url]}\"><img src=\"#{selected_size[:source]}\" title=\"#{@photo[:title]}\"></a>"
+        "<a class=\"flickr_photo\" href=\"#{@photo[:url]}\"><img class=\"flickr_photo\" src=\"#{selected_size[:source]}\" title=\"#{@photo[:title]}\"></a>"
     end
 
     def get_photo
